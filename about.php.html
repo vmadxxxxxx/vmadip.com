@@ -1,0 +1,258 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="description" content="Bitcoinwallet.com replaces bitcoin addresses with your name. We are the easiest to use and most secure bitcoin wallet service.">
+<meta name="keywords" content="bitcoin wallet, no transaction fees, proof of solvency, bitcoin bank, secure bitcoin wallet.">
+<meta name="msvalidate.01" content="5E60F57284D5D363443E54E809ACE8BD" />
+<LINK href="stylesheet.css" rel="stylesheet" type="text/css">
+<link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/smoothness/jquery-ui.min.css" rel="stylesheet" type="text/css" />
+<title>Bitcoin Wallet</title>
+<meta property="og:title" content="BitcoinWallet.com"/>
+<meta property="og:site_name" content="https://bitcoinwallet.com"/>
+<meta property="og:description" content="Bitcoin addresses as easy as your name. Send bitcoin instantly with no fees."/>
+<meta property="og:image" content="https://bitcoinwallet.com/images/icon_leaf.png"/>
+
+
+    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-47825020-1', 'bitcoinwallet.com');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body style="margin: 0px 0px 0px 0px; background-color:#c2c2c2;">
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=419838244743649";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<style  type="text/css">.input_search
+{
+-webkit-border-radius:10px;
+-moz-border-radius:10px;
+border-radius: 10px;
+height:20px;
+width:120px;
+border:0px;
+text-align:center;
+color:#c2c2c2;
+background-color: #2b3642;
+}
+
+.menu_circular 
+{
+	width: 36px;
+	height: 36px;
+	border-radius: 18px;
+	-webkit-border-radius: 18px;
+	-moz-border-radius: 18px;
+	background: url('') no-repeat;
+	}
+</style>
+
+<table width="100%" cellpadding="0" cellspacing="0" valign="top" border="0">
+	<tr>
+		<td bgcolor="#282828" height="40px" align="center">
+			<table width="1000px" border="0">
+            	<tr>
+					<td style="padding-left:10px;" nowrap="nowrap"><a href='index.html' class='menu'>Home</a></td>
+                    <td style="padding-left:40px;" nowrap="nowrap"><a href='user_signup.php.html' class='menu'>Create Account</a></td>
+                    <!--<td style="padding-left:40px;" nowrap="nowrap"><a href='https://bitcoinwallet.com/user_giveaway.php' class='menu'>Giveaways</a></td>-->
+                    <!--<td style="padding-left:40px;" nowrap="nowrap"><a href='https://bitcoinwallet.com/buy_sell_bitcoin.php' class='menu'>Buy/Sell</a></td>-->
+                    <td style="padding-left:40px;" nowrap="nowrap"><a href='https://localbitcoins.com/?ch=1mux' class='menu' target="_blank">Buy/Sell</a></td>
+                    <td style="padding-left:40px;" nowrap="nowrap"><a href='support.php.html' class='menu'>Support</a></td>
+                    <!--<td style="padding-left:40px;" nowrap="nowrap"><a href='https://bitcoinwallet.com/resource.php' class='menu'>Stats</a></td>-->
+                    <td style="padding-left:40px;" nowrap="nowrap"><a href='faq.php.html' class='menu'>FAQ</a></td>
+					<td style="padding-left:40px;" nowrap="nowrap"><a href='user_login.php.html' class='menu'>Log In</a></td>
+                    <td width="140px"></td>
+                    <td align='right'>
+					<form method='post' action='user_search.php.html'><input type='text' name='search' id='search'  value=' User Search' class="input_search"   onFocus="if(this.value==' User Search')this.value='';" onBlur="if(this.value=='')this.value=' User Search';">
+                    <input type="hidden" name="csrftoken" id="csrftoken" value="afdbdaf9e005afde0380917a7177acae" />
+					</td>
+					<td>
+					<input type='submit' id="btnSearch" name="btnSearch" value='' style="position: absolute; left: -9999px">					
+					</td></form>
+				</tr>
+           	</table>
+      	</td>
+   	</tr>
+<!--	<tr>
+		<td bgcolor="#010101" height="10px" align="center"><span class="bold_green_medium">Due to blockchain congestion, withdrawals will have a 0.0005 bitcoin charge added to the fee to accelerate their arrival.<br></td>
+	</tr> -->
+ 		<tr>
+		<td bgcolor="#010101" height="10px" align="center"><span class="bold_green_medium">Due to congestion on the bitcoin blockchain, the fee for withdrawing bitcoin will increase to 0.001 bitcoin effective January 5, 2018.</td>
+	</tr>
+	</table>
+<!--Start headline -->
+
+<!--
+    <tr height="1px">
+    	<td colspan="2" height="1px" bgcolor="#447f43" width="364px"></td>
+        <td colspan="3" height="1px" bgcolor="#2b3642"></td>
+    </tr>
+-->
+</table>
+<!--End headline -->
+
+<table width="1000px" align="center" bgcolor="#ffffff" cellpadding="0" cellspacing="0">
+    <tr>
+        <td align="center" style="padding-top:10px;padding-bottom:10px;background-color:#5ea9dd;"><span class="login_headline">About Us</span></td>
+    </tr>
+    <tr>
+        <td> 
+        <img src="images/bg_blue_to_gray.png">
+        </td>
+    </tr>    
+    <tr>
+    	<td>
+        	<table width="820px" align="center"  cellpadding="0" cellspacing="0">
+                <tr>
+                    <td style="padding-left:30px;padding-right:30px;padding-top:20px;">
+                    <span class="bold_black">BitcoinWallet.com was founded by Price Givens and Alex Charfen with the vision of making bitcoin easier to use.  Mr. Charfen and Mr. Givens started their first business together managing customer funds in 1993 while attending California State University.
+                    <br><br>
+                    In the years since, Mr. Charfen and Mr. Givens have collectively acted as officers of public and private businesses with revenues exceeding $1 billion.<br><br> 
+                    </span>
+                    </td>
+                </tr>
+                <tr>
+                	<td>
+                    	<table align="center" width="1000px" cellpadding="0" cellspacing="0" style="padding-top:20px;padding-left:30px;">
+                        	<tr>
+                            	<td style="padding-left:205px;">
+								<style type="text/css">.circular_about {
+                                width: 220px;
+                                height: 220px;
+                                border-radius: 110px;
+                                -webkit-border-radius: 110px;
+                                -moz-border-radius: 110px;
+                                background: url('https://images.bitcoinwallet.com/Files/fc9be77d66857b4e928491cddf426d0b.jpg') no-repeat;
+                                }
+                                </style>
+                                <a href="https://price.bitcoinwallet.com" style="text-decoration:none;">
+                                <img src="https://images.bitcoinwallet.com/Files/fc9be77d66857b4e928491cddf426d0b.jpg" class="circular_about">
+                                </a>
+                                <br>
+                                <a href="https://price.bitcoinwallet.com" style="text-decoration:none;">
+                                <span style="color:#52eb72;font-size:20px;font-family:Segoe, 'Segoe UI', 'DejaVu Sans', 'Trebuchet MS', Verdana, sans-serif;"><strong>price</strong>.bitcoinwallet.com</span></a>
+                                </td>
+                            	<td  style="padding-right:130px;">
+								<style type="text/css">.circular_about {
+                                width: 220px;
+                                height: 220px;
+                                border-radius: 110px;
+                                -webkit-border-radius: 110px;
+                                -moz-border-radius: 110px;
+                                background: url('https://images.bitcoinwallet.com/Files/alex.jpg') no-repeat;
+                                }
+                                </style>
+                                <a href="https://alex.bitcoinwallet.com" style="text-decoration:none;">
+                                <img src="https://images.bitcoinwallet.com/Files/alex.jpg" class="circular_about">
+                                </a>
+                                <br>
+                                 <a href="https://alex.bitcoinwallet.com" style="text-decoration:none;">
+                                <span style="color:#52eb72;font-size:20px;font-family:Segoe, 'Segoe UI', 'DejaVu Sans', 'Trebuchet MS', Verdana, sans-serif;"><strong>alex</strong>.bitcoinwallet.com</span></a>
+                                </td>
+                            </tr>    
+                       	</table>
+                        <table align="center"  width="1000px" style="padding-top:30px;padding-bottom:60px;padding-left:70px;" cellpadding="0" cellspacing="0">     
+                            <tr>    
+                            	<td>
+								<style type="text/css">.circular_about {
+                                width: 220px;
+                                height: 220px;
+                                border-radius: 110px;
+                                -webkit-border-radius: 110px;
+                                -moz-border-radius: 110px;
+                                background: url('images/users/emmanuel.png') no-repeat;
+                                }
+                                </style>
+                                <a href="https://emmanuel.bitcoinwallet.com" style="text-decoration:none;">
+                                <img src="images/users/emmanuel.png" class="circular_about">
+                                </a>
+                                <br>
+                                 <a href="https://emmanuel.bitcoinwallet.com" style="text-decoration:none;">
+                                <span style="color:#52eb72;font-size:20px;font-family:Segoe, 'Segoe UI', 'DejaVu Sans', 'Trebuchet MS', Verdana, sans-serif;"><strong>emmanuel</strong>.bitcoinwallet.com</span></a>
+                                </td>                              
+                            	<td>
+								<style type="text/css">.circular_about {
+                                width: 220px;
+                                height: 220px;
+                                border-radius: 110px;
+                                -webkit-border-radius: 110px;
+                                -moz-border-radius: 110px;
+                                background: url('https://images.bitcoinwallet.com/Files/marcio.jpg') no-repeat;
+                                }
+                                </style>
+                                <a href="https://marcio.bitcoinwallet.com" style="text-decoration:none;">
+                                <img src="https://images.bitcoinwallet.com/Files/marcio.jpg" class="circular_about">
+                                </a>
+                                <br>
+								<a href="https://marcio.bitcoinwallet.com" style="text-decoration:none;">
+                                <span style="color:#52eb72;font-size:20px;font-family:Segoe, 'Segoe UI', 'DejaVu Sans', 'Trebuchet MS', Verdana, sans-serif;"><strong>marcio</strong>.bitcoinwallet.com</span></a>
+                                </td>
+                            	<td style="padding-left:40px;">
+								<style type="text/css">.circular_about {
+                                width: 220px;
+                                height: 220px;
+                                border-radius: 110px;
+                                -webkit-border-radius: 110px;
+                                -moz-border-radius: 110px;
+                                background: url('https://images.bitcoinwallet.com/Files/denis.jpg') no-repeat;
+                                }
+                                </style>
+                                <a href="https://denis.bitcoinwallet.com" style="text-decoration:none;">
+                                <img src="https://images.bitcoinwallet.com/Files/denis.jpg" class="circular_about">
+                                </a>
+                                <br>
+                                <a href="https://denis.bitcoinwallet.com" style="text-decoration:none;">
+                                <span style="color:#52eb72;font-size:20px;font-family:Segoe, 'Segoe UI', 'DejaVu Sans', 'Trebuchet MS', Verdana, sans-serif;"><strong>denis</strong>.bitcoinwallet.com</span></a>
+                                </td>                                
+                            </tr>    
+                        </table>
+                    </td>
+                </tr>
+			</table>
+		</td>
+	</tr>
+</table>        
+
+
+<table width="1000px" align="center" bgcolor="#2c3137" cellspacing="0" cellpadding="0">
+    <tr>
+    	<td align="center">
+        	<table width="600px">
+    			<tr>
+                    <td><a href='terms.php.html' class='light_blue_medium'>Terms of Use</a></td>
+    				<td><a href='privacy.php.html' class='light_blue_medium'>Privacy Policy</a></td>
+	                <td><a href='developers.php.html' class='light_blue_medium'>Developers</a></td>
+					<td><a href='advertisers.php.html' class='light_blue_medium'>Advertisers</a></td>
+        			<td><a href='about.php.html' class='light_blue_medium'>About Us</a></td>
+                    <td><a href='blog.php.html' class='light_blue_medium'>Blog</a></td>
+					<td style="padding-left:15px;padding-top:3px;"><a href='https://twitter.com/btcw1'><img src='images/icon_twitter.png' height='15px' border='0'></a></td>
+				</tr>
+          	</table>
+        </td>	          
+    </tr>
+	<tr>
+		<td bgcolor="#282828" height="6px"><img src="images/spacer.png" height="6px"></td>
+	</tr>   
+</table>
+

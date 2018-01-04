@@ -1,0 +1,329 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="description" content="Bitcoinwallet.com replaces bitcoin addresses with your name. We are the easiest to use and most secure bitcoin wallet service.">
+<meta name="keywords" content="bitcoin wallet, no transaction fees, proof of solvency, bitcoin bank, secure bitcoin wallet.">
+<meta name="msvalidate.01" content="5E60F57284D5D363443E54E809ACE8BD" />
+<LINK href="stylesheet.css" rel="stylesheet" type="text/css">
+<link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/smoothness/jquery-ui.min.css" rel="stylesheet" type="text/css" />
+<title>Bitcoin Wallet</title>
+<meta property="og:title" content="BitcoinWallet.com"/>
+<meta property="og:site_name" content="https://bitcoinwallet.com"/>
+<meta property="og:description" content="Bitcoin addresses as easy as your name. Send bitcoin instantly with no fees."/>
+<meta property="og:image" content="https://bitcoinwallet.com/images/icon_leaf.png"/>
+
+
+    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-47825020-1', 'bitcoinwallet.com');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body style="margin: 0px 0px 0px 0px; background-color:#c2c2c2;">
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=419838244743649";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<style  type="text/css">.input_search
+{
+-webkit-border-radius:10px;
+-moz-border-radius:10px;
+border-radius: 10px;
+height:20px;
+width:120px;
+border:0px;
+text-align:center;
+color:#c2c2c2;
+background-color: #2b3642;
+}
+
+.menu_circular 
+{
+	width: 36px;
+	height: 36px;
+	border-radius: 18px;
+	-webkit-border-radius: 18px;
+	-moz-border-radius: 18px;
+	background: url('') no-repeat;
+	}
+</style>
+
+<table width="100%" cellpadding="0" cellspacing="0" valign="top" border="0">
+	<tr>
+		<td bgcolor="#282828" height="40px" align="center">
+			<table width="1000px" border="0">
+            	<tr>
+					<td style="padding-left:10px;" nowrap="nowrap"><a href='index.html' class='menu'>Home</a></td>
+                    <td style="padding-left:40px;" nowrap="nowrap"><a href='user_signup.php.html' class='menu'>Create Account</a></td>
+                    <!--<td style="padding-left:40px;" nowrap="nowrap"><a href='https://bitcoinwallet.com/user_giveaway.php' class='menu'>Giveaways</a></td>-->
+                    <!--<td style="padding-left:40px;" nowrap="nowrap"><a href='https://bitcoinwallet.com/buy_sell_bitcoin.php' class='menu'>Buy/Sell</a></td>-->
+                    <td style="padding-left:40px;" nowrap="nowrap"><a href='https://localbitcoins.com/?ch=1mux' class='menu' target="_blank">Buy/Sell</a></td>
+                    <td style="padding-left:40px;" nowrap="nowrap"><a href='support.php.html' class='menu'>Support</a></td>
+                    <!--<td style="padding-left:40px;" nowrap="nowrap"><a href='https://bitcoinwallet.com/resource.php' class='menu'>Stats</a></td>-->
+                    <td style="padding-left:40px;" nowrap="nowrap"><a href='faq.php.html' class='menu'>FAQ</a></td>
+					<td style="padding-left:40px;" nowrap="nowrap"><a href='user_login.php.html' class='menu'>Log In</a></td>
+                    <td width="140px"></td>
+                    <td align='right'>
+					<form method='post' action='user_search.php.html'><input type='text' name='search' id='search'  value=' User Search' class="input_search"   onFocus="if(this.value==' User Search')this.value='';" onBlur="if(this.value=='')this.value=' User Search';">
+                    <input type="hidden" name="csrftoken" id="csrftoken" value="2cc4b77459f16b7bf56a7568ea8ebec7" />
+					</td>
+					<td>
+					<input type='submit' id="btnSearch" name="btnSearch" value='' style="position: absolute; left: -9999px">					
+					</td></form>
+				</tr>
+           	</table>
+      	</td>
+   	</tr>
+<!--	<tr>
+		<td bgcolor="#010101" height="10px" align="center"><span class="bold_green_medium">Due to blockchain congestion, withdrawals will have a 0.0005 bitcoin charge added to the fee to accelerate their arrival.<br></td>
+	</tr> -->
+ 		<tr>
+		<td bgcolor="#010101" height="10px" align="center"><span class="bold_green_medium">Due to congestion on the bitcoin blockchain, the fee for withdrawing bitcoin will increase to 0.001 bitcoin effective January 5, 2018.</td>
+	</tr>
+	</table>
+<!--Start headline -->
+
+<!--
+    <tr height="1px">
+    	<td colspan="2" height="1px" bgcolor="#447f43" width="364px"></td>
+        <td colspan="3" height="1px" bgcolor="#2b3642"></td>
+    </tr>
+-->
+</table>
+<!--End headline -->
+<table width="1000px" align="center" bgcolor="#ffffff" cellpadding="0" cellspacing="0">
+  <tr>
+    <td align="center" style="padding-top:10px;padding-bottom:10px;background-color:#5ea9dd;"><span class="login_headline">Frequently Asked Questions</span></td>
+  </tr>
+  <tr>
+    <td><img src="images/bg_blue_to_gray.png"></td>
+  </tr>
+  <tr>
+    <td style="padding-left:10px;padding-top:20px;"><table align="center" width="850px" style="border:2px solid #8fa8c4; border-radius: 5px;" bgcolor="#d2e4f9">
+        <tr>
+          <td><span class="bold_black_medium"> <strong>Q. What are your fees?</strong> <br>
+            A.  Our fees are simple!  User-to-user transactions within bitcoinwallet.com are free and have no transaction fee. They are also instant, with no confirmation delays. It's the best value!
+<br><br>
+All transactions into and out of bitcoinwallet.com have a one percent transaction fee to cover miner fees, storage and the cost of our service. During times of blockchain congestion, withdrawals may have an additional fee to ensure fast delivery.</span></td>
+        </tr>
+      </table>
+      <br>
+      <table align="center" width="850px" style="border:2px solid #8fa8c4; border-radius: 5px;" bgcolor="#d2e4f9">
+        <tr>
+          <td><span class="bold_black_medium"> <strong>Q. What are the minimum transaction sizes?</strong> <br>
+            A. The minimum transaction size of deposits from the blockchain and withdrawals to the blockchain is .002 bitcoin. The minimum User-to-user transactions within bitcoinwallet.com is .00000001 bitcoin (1 satoshi). </span></td>
+        </tr>
+      </table>
+      <br>
+      <table align="center" width="850px" style="border:2px solid #8fa8c4; border-radius: 5px;" bgcolor="#d2e4f9">
+        <tr>
+          <td><span class="bold_black_medium"> <strong>Q. How do I stop spammers from sending me .00000001 bitcoin and a spammy note?</strong> <br>
+            A. You decide the minimum amount you're willing to accept as payment from other users. Click "Account" on the menu and enter a value for the User Preference "Minimum amount accepted from other users". </span></td>
+        </tr>
+      </table>
+      <br>
+      <a name="solvency"></a>
+      <table align="center" width="850px" style="border:2px solid #8fa8c4; border-radius: 5px;" bgcolor="#d2e4f9">
+        <tr>
+          <td><span class="bold_black_medium"> <strong>Q. Can we see proof you have the customer funds?</strong> <br>
+            A. We use a Proof of Solvency method that allows anyone to confirm that any user's balance is accounted for (without seeing that user's balance).  Click the green leaf icon on any user's page to verify their inclusion in our Proof of Solvency hash. </span></td>
+        </tr>
+      </table>
+      <br>
+
+      <table align="center" width="850px" style="border:2px solid #8fa8c4; border-radius: 5px;" bgcolor="#d2e4f9">
+        <tr>
+          <td><span class="bold_black_medium"> <strong>Q. What is the storage strategy?</strong> <br>
+            A. Initially customer funds are pooled.  We are working on optional individual storage with user accessible private keys, multi-sig withdrawals and insured storage.  Our cold storage wallets are distributed in physical vaults throughout the country and require multiple people to access. Our cold storage wallets are not accessible via any system.  There is no automatic replenish of the hot wallet from cold storage. </span></td>
+        </tr>
+      </table>
+      <br>
+      <table align="center" width="850px" style="border:2px solid #8fa8c4; border-radius: 5px;" bgcolor="#d2e4f9">
+        <tr>
+          <td><span class="bold_black_medium"> <strong>Q. How do I deposit dollars in this account?</strong> <br>
+            A. BitcoinWallet.com shows you the dollar equivalent (or local currency of your choice) of your bitcoins based on real time exchange rates, but we do not accept government backed currency deposits or withdrawals. </span></td>
+        </tr>
+      </table>
+      <br>
+      <table align="center" width="850px" style="border:2px solid #8fa8c4; border-radius: 5px;" bgcolor="#d2e4f9">
+        <tr>
+          <td><span class="bold_black_medium"> <strong>Q. How do I buy bitcoins?</strong> <br>
+            A. BitcoinWallet.com is not an exchange or marketplace for buying and selling bitcoin for cash. BitcoinWallet.com is a wallet service that makes it easy to send, receive and track your bitcoin transactions securely. You can buy and sell bitcoin with the services listed <a href='https://bitcoinwallet.com/buy_sell_bitcoin.php' target="_blank">here</a>.</span></td>
+        </tr>
+      </table>
+      <br>
+      <table align="center" width="850px" style="border:2px solid #8fa8c4; border-radius: 5px;" bgcolor="#d2e4f9">
+        <tr>
+          <td><span class="bold_black_medium"> <strong>Q. Where can I find my bitcoin address? </strong> <br>
+            A. Your bitcoin address is available in three places.  Anyone can see your official bitcoin address on your public profile page.  Your profile page address is your user name.bitcoinwallet.com (example https://price.bitcoinwallet.com).  Your bitcoin address (and any external addresses you added to your account) is also available via API at user name.bitcoinwallet.com/api (example https://price.bitcoinwallet.com/api).  Your bitcoin address is also shown on your dashboard when you log in, under the text "Deposit bitcoin". </span></td>
+        </tr>
+      </table>
+      <br>
+      <table align="center" width="850px" style="border:2px solid #8fa8c4; border-radius: 5px;" bgcolor="#d2e4f9">
+        <tr>
+          <td><span class="bold_black_medium"> <strong>Q. Why is my balance negative?</strong> <br>
+            A. If you receive very small deposits that are less than the transaction fee your account balance can become negative. </span></td>
+        </tr>
+      </table>
+      <br>
+      <table align="center" width="850px" style="border:2px solid #8fa8c4; border-radius: 5px;" bgcolor="#d2e4f9">
+        <tr>
+          <td><span class="bold_black_medium"> <strong>Q. How do I upload my Image?</strong> <br>
+            A. Log in to your BitcoinWallet.com account and click Account on the top menu.  From there click "Edit Picture" and select a picture to upload. </span></td>
+        </tr>
+      </table>
+      <br>
+      <table align="center" width="850px" style="border:2px solid #8fa8c4; border-radius: 5px;" bgcolor="#d2e4f9">
+        <tr>
+          <td><span class="bold_black_medium"> <strong>Q. Where are you based?</strong> <br>
+            A. We are based in the United States. Our servers are in U.S. based data centers. </span></td>
+        </tr>
+      </table>
+      <br>
+      <table align="center" width="850px" style="border:2px solid #8fa8c4; border-radius: 5px;" bgcolor="#d2e4f9">
+        <tr>
+          <td><span class="bold_black_medium"> <strong>Q. Who are your business associates and partners?</strong> <br>
+            A. Our servers, load balancers and database are hosted by Amazon AWS. Our SHA-2 SSL is provided by Godaddy.  Some of our development tools and our analytics are provided by Google.  Every member of our development team has been involved with our founders' businesses for a minimum of 5 years.  Our founders, Price Givens and Alex Charfen, have been business partners for 20+ years. </span></td>
+        </tr>
+      </table>
+      <br>
+      <table align="center" width="850px" style="border:2px solid #8fa8c4; border-radius: 5px;" bgcolor="#d2e4f9">
+        <tr>
+          <td><span class="bold_black_medium"> <strong>Q. Why didn't I appear as a new user on the home page when I created my account?</strong> <br>
+            A. We only show new users that have added a profile picture.  Adding a profile picture is a great way to get more visitors on your page. </span></td>
+        </tr>
+      </table>
+      <br>
+      <table align="center" width="850px" style="border:2px solid #8fa8c4; border-radius: 5px;" bgcolor="#d2e4f9">
+        <tr>
+          <td><span class="bold_black_medium"> <strong>Q. When will you offer languages other than English?</strong> <br>
+            A. We are launching in a beta program and we expect to make many adjustments to the website during the first three months.  We will launch with over a dozen languages immediately following our beta program. </span></td>
+        </tr>
+      </table>
+      <br>
+
+      <a name="external_address"></a>
+      <table align="center" width="850px" style="border:2px solid #8fa8c4; border-radius: 5px;" bgcolor="#d2e4f9">
+        <tr>
+          <td><span class="bold_black_medium"> <strong>Q. What are external addresses?</strong> <br>
+            A. When you create your bitcoinwallet.com account an official bitcoin address is assigned to you.  Anyone can send bitcoin to your official address and it will appear as a deposit into your bitcoinwallet.com account.  In addition, you can list all your other addresses for bitcoin and other alternative cryptocurrencies on your page as external addresses.  When a visitor views your profile page they'll see all your addresses and can send you a payment in the currency of their choice.  On your dashboard page we show the real time balance of your external address for Bitcoin, Litecoin, Dogecoin, Megacoin, Quark and Peercoin.  Only you can see the balances of your external addresses.  You can set your external addresses to private, making them invisible to the public. </span></td>
+        </tr>
+      </table>
+
+      <br>
+      <table align="center" width="850px" style="border:2px solid #8fa8c4; border-radius: 5px;" bgcolor="#d2e4f9">
+        <tr>
+          <td><span class="bold_black_medium"> <strong>Q. I want to make a payment or donation on a BitcoinWallet.com page.  How do I know the page belongs to who I think it does?</strong> <br>
+            A. Every user's page shows the email address used to create the page (i.e. *****@hotmail.com).  If you think you're on the official Red Cross page and you see that the email address used to activate that page is anything other than *****@redcross.org you need to be very careful.  In other words, the real Red Cross isn't going to create their BitcoinWallet.com account using a Hotmail address. </span></td>
+        </tr>
+      </table>
+      <br>
+      <table align="center" width="850px" style="border:2px solid #8fa8c4; border-radius: 5px;" bgcolor="#d2e4f9">
+        <tr>
+          <td><span class="bold_black_medium"> <strong>Q. I sent coins to the wrong bitcoin address. How can I get it back?</strong> <br>
+            A. Bitcoin payments can not be reversed.  If you send bitcoin to the wrong address by mistake it cannot be recovered.</span></td>
+        </tr>
+      </table>
+      <br>
+      
+      <table align="center" width="850px" style="border:2px solid #8fa8c4; border-radius: 5px;" bgcolor="#d2e4f9">
+        <tr>
+          <td><span class="bold_black_medium"> <strong>Q. I want to start a crowdsourcing fund, how do I do it?</strong> <br>
+            A. We haven't officially released this feature but here's how it will work.  On your dashboard you'll see "Your Crowdsource Funds".  You can create and manage your crowdsource funds there. </span></td>
+        </tr>
+      </table>
+      <br>
+      <table align="center" width="850px" style="border:2px solid #8fa8c4; border-radius: 5px;" bgcolor="#d2e4f9">
+        <tr>
+          <td><span class="bold_black_medium"> <strong>Q. How do I get my account verified?</strong> <br>
+            A. Verified accounts have been manually reviewed by BitcoinWallet and meet authentication criteria.  Before requesting account verification you need to have a website that you control or a verified twitter account or a verified facebook page or an established reddit account.  If you want your account verified send an email to support@bitcoinwallet.com with the username that you want verified and your contact information.  The account verification process includes a non-refundable fee of .1 btc to cover the expense of our manual verification process. </span></td>
+        </tr>
+      </table>
+      <br>
+      <table align="center" width="850px" style="border:2px solid #8fa8c4; border-radius: 5px;" bgcolor="#d2e4f9">
+        <tr>
+          <td><span class="bold_black_medium"> <strong>Q. I made a deposit to BitcoinWallet.com.  How long does it take to become available?</strong> <br>
+            A. BitcoinWallet.com requires that deposits be confirmed on the blockchain 6 times before they are available.  That takes around an hour.  If you don't see your deposit as a pending transaction on your BitcoinWallet.com dashboard within 10 minutes submit a support ticket with your username and as many transaction details as you have (sending address, receiving address, block, amount, time sent). </span></td>
+        </tr>
+      </table>
+      <br>
+      <table align="center" width="850px" style="border:2px solid #8fa8c4; border-radius: 5px;" bgcolor="#d2e4f9">
+        <tr>
+          <td><span class="bold_black_medium"> <strong>Q. What do I need to provide to create an account?</strong> <br>
+            A. You need an email account and a mobile phone that accepts sms messages.  You must verify your email address and mobile phone to complete sign up.  To provide a high level of security for our system we require you to confirm a verification code sent to your mobile phone each time you log in or send funds. </span></td>
+        </tr>
+      </table>
+      <br>
+      <table align="center" width="850px" style="border:2px solid #8fa8c4; border-radius: 5px;" bgcolor="#d2e4f9">
+        <tr>
+          <td><span class="bold_black_medium"> <strong>Q. What's a Premium Username?</strong> <br>
+            A. Choosing your bitcoinwallet.com username is like registering a valuable domain name that you're proud to keep forever.  On most sites the assignment of usernames is a land rush: first come first serve.  To prevent ingenius early adopters (bless their hearts!) from registering all the best usernames in the first 5 minutes we've added some friction to give everyone a chance at getting their desired username. The pricing for Premium Usernames is based on the length of the username and whether it contains numbers.  Usernames with 1-4 characters (X, Bo, Jon, Bill) are Premium Usernames.  Usernames with five or more are free. <br>
+            <br>
+            1 character names = 2 btc + .2 btc per year<br>
+            2 character names = 1 btc + .1 btc per year<br>
+            3 character names = .4 btc + .04 btc per year<br>
+            4 character names = .1 btc + .01 btc per year<br>
+            5+ character names = Free </span></td>
+        </tr>
+      </table>
+      <br>
+      <table align="center" width="850px" style="border:2px solid #8fa8c4; border-radius: 5px;" bgcolor="#d2e4f9">
+        <tr>
+          <td><span class="bold_black_medium"> <strong>Q. Can I buy or sell bitcoin from bitcoinwallet.com? </strong> <br>
+            A. At the moment, Bitcoinwallet.com is not an exchange, an administrator of virtual currency or a money transmitter and we don't deal with any government issued currency. Bitcoinwallet.com allows you to receive bitcoin and send bitcoin to other bitcoinwallet.com users without fees or confirmation delays. </span></td>
+        </tr>
+      </table>
+      
+      <br>
+      <table align="center" width="850px" style="border:2px solid #8fa8c4; border-radius: 5px;" bgcolor="#d2e4f9">
+        <tr>
+          <td><span class="bold_black_medium"> <strong>Q. Someone has logged into my account and my coins are no longer there, now what?  </strong> <br>
+            A. Your Bitcoinwallet.com account is accessible to anyone that has the correct email and password combination needed to log in. We have no way of knowing whether a correctly authenticated login is you or someone else that obtained your password and changed the email on the account.   Similarly, if you complain to us we have no way of establishing that you are who you say you are, and that you didn't take the coins yourself.
+<br><br>
+The bottom line is: protect your password, because there is nothing we can do to help you recover missing coins.  If you are able to log into your account you can see the IP addresses of the most recent logins on your account page.  You can see the blockchain address where withdrawals were sent to on the transaction detail page.  We have no additional information to provide and we are not equipped to conduct investigations on your behalf.  Provide the login and transaction activity to the law enforcement agency of your choice. </span></td>
+        </tr>
+      </table>
+      <br></td>
+  </tr>
+</table>
+<table width="1000px" align="center" bgcolor="#2c3137" cellspacing="0" cellpadding="0">
+    <tr>
+    	<td align="center">
+        	<table width="600px">
+    			<tr>
+                    <td><a href='terms.php.html' class='light_blue_medium'>Terms of Use</a></td>
+    				<td><a href='privacy.php.html' class='light_blue_medium'>Privacy Policy</a></td>
+	                <td><a href='developers.php.html' class='light_blue_medium'>Developers</a></td>
+					<td><a href='advertisers.php.html' class='light_blue_medium'>Advertisers</a></td>
+        			<td><a href='about.php.html' class='light_blue_medium'>About Us</a></td>
+                    <td><a href='blog.php.html' class='light_blue_medium'>Blog</a></td>
+					<td style="padding-left:15px;padding-top:3px;"><a href='https://twitter.com/btcw1'><img src='images/icon_twitter.png' height='15px' border='0'></a></td>
+				</tr>
+          	</table>
+        </td>	          
+    </tr>
+	<tr>
+		<td bgcolor="#282828" height="6px"><img src="images/spacer.png" height="6px"></td>
+	</tr>   
+</table>
+

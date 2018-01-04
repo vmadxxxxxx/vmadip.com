@@ -1,0 +1,433 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="description" content="Bitcoinwallet.com replaces bitcoin addresses with your name. We are the easiest to use and most secure bitcoin wallet service.">
+<meta name="keywords" content="bitcoin wallet, no transaction fees, proof of solvency, bitcoin bank, secure bitcoin wallet.">
+<meta name="msvalidate.01" content="5E60F57284D5D363443E54E809ACE8BD" />
+<LINK href="stylesheet.css" rel="stylesheet" type="text/css">
+<link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/smoothness/jquery-ui.min.css" rel="stylesheet" type="text/css" />
+<title>Bitcoin Wallet</title>
+<meta property="og:title" content="BitcoinWallet.com"/>
+<meta property="og:site_name" content="https://bitcoinwallet.com"/>
+<meta property="og:description" content="Bitcoin addresses as easy as your name. Send bitcoin instantly with no fees."/>
+<meta property="og:image" content="https://bitcoinwallet.com/images/icon_leaf.png"/>
+
+
+    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-47825020-1', 'bitcoinwallet.com');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body style="margin: 0px 0px 0px 0px; background-color:#c2c2c2;">
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=419838244743649";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<style  type="text/css">.input_search
+{
+-webkit-border-radius:10px;
+-moz-border-radius:10px;
+border-radius: 10px;
+height:20px;
+width:120px;
+border:0px;
+text-align:center;
+color:#c2c2c2;
+background-color: #2b3642;
+}
+
+.menu_circular 
+{
+	width: 36px;
+	height: 36px;
+	border-radius: 18px;
+	-webkit-border-radius: 18px;
+	-moz-border-radius: 18px;
+	background: url('') no-repeat;
+	}
+</style>
+
+<table width="100%" cellpadding="0" cellspacing="0" valign="top" border="0">
+	<tr>
+		<td bgcolor="#282828" height="40px" align="center">
+			<table width="1000px" border="0">
+            	<tr>
+					<td style="padding-left:10px;" nowrap="nowrap"><a href='index.html' class='menu'>Home</a></td>
+                    <td style="padding-left:40px;" nowrap="nowrap"><a href='user_signup.php.html' class='menu'>Create Account</a></td>
+                    <!--<td style="padding-left:40px;" nowrap="nowrap"><a href='https://bitcoinwallet.com/user_giveaway.php' class='menu'>Giveaways</a></td>-->
+                    <!--<td style="padding-left:40px;" nowrap="nowrap"><a href='https://bitcoinwallet.com/buy_sell_bitcoin.php' class='menu'>Buy/Sell</a></td>-->
+                    <td style="padding-left:40px;" nowrap="nowrap"><a href='https://localbitcoins.com/?ch=1mux' class='menu' target="_blank">Buy/Sell</a></td>
+                    <td style="padding-left:40px;" nowrap="nowrap"><a href='support.php.html' class='menu'>Support</a></td>
+                    <!--<td style="padding-left:40px;" nowrap="nowrap"><a href='resource.php.html' class='menu'>Stats</a></td>-->
+                    <td style="padding-left:40px;" nowrap="nowrap"><a href='faq.php.html' class='menu'>FAQ</a></td>
+					<td style="padding-left:40px;" nowrap="nowrap"><a href='user_login.php.html' class='menu'>Log In</a></td>
+                    <td width="140px"></td>
+                    <td align='right'>
+					<form method='post' action='user_search.php.html'><input type='text' name='search' id='search'  value=' User Search' class="input_search"   onFocus="if(this.value==' User Search')this.value='';" onBlur="if(this.value=='')this.value=' User Search';">
+                    <input type="hidden" name="csrftoken" id="csrftoken" value="b2320ef98bd7ff6631cc4a2a392a4195" />
+					</td>
+					<td>
+					<input type='submit' id="btnSearch" name="btnSearch" value='' style="position: absolute; left: -9999px">					
+					</td></form>
+				</tr>
+           	</table>
+      	</td>
+   	</tr>
+<!--	<tr>
+		<td bgcolor="#010101" height="10px" align="center"><span class="bold_green_medium">Due to blockchain congestion, withdrawals will have a 0.0005 bitcoin charge added to the fee to accelerate their arrival.<br></td>
+	</tr> -->
+ 		<tr>
+		<td bgcolor="#010101" height="10px" align="center"><span class="bold_green_medium">Due to congestion on the bitcoin blockchain, the fee for withdrawing bitcoin will increase to 0.001 bitcoin effective January 5, 2018.</td>
+	</tr>
+	</table>
+<!--Start headline -->
+
+<!--
+    <tr height="1px">
+    	<td colspan="2" height="1px" bgcolor="#447f43" width="364px"></td>
+        <td colspan="3" height="1px" bgcolor="#2b3642"></td>
+    </tr>
+-->
+</table>
+<!--End headline -->
+
+<table width="1000px" align="center" bgcolor="#ffffff" cellpadding="0" cellspacing="0">
+    <tr>
+        <td align="center" style="padding-top:10px;padding-bottom:10px;background-color:#5ea9dd;"><span class="login_headline">Blog</span></td>
+    </tr>
+    <tr>
+        <td> 
+        <img src="images/bg_blue_to_gray.png">
+        </td>
+    </tr>    
+    <tr>
+    	<td style="padding-top:20px;">
+        	<table width="820px" align="center" cellpadding="0" cellpadding="0">
+                 <tr>
+                    <td>
+                    	<table cellpadding="0" cellpadding="0">
+                        	<tr>
+                                <td style="padding-top:7px;padding-left:5px;">
+                                <span class="bold_black_medium">
+                                <strong>
+                                Policy Notice: Email 2FA to be enabled.
+                                </strong>
+                                <br>
+                                January 11, 2017
+                                <br>
+                                Price Givens
+                                <br>
+                                <a href="https://price.bitcoinwallet.com" class="bold_black_medium">price.bitcoinwallet.com</a>
+								</td>
+								<td style="padding-left:380px">
+								<style type="text/css">.circular_about {
+                                width: 80px;
+                                height: 80px;
+                                border-radius: 40px;
+                                -webkit-border-radius: 40px;
+                                -moz-border-radius: 40px;
+                                background: url('https://images.bitcoinwallet.com/Files/fc9be77d66857b4e928491cddf426d0b.jpg') no-repeat;
+                                }
+                                </style>
+                                <a href="https://price.bitcoinwallet.com" style="text-decoration:none;">
+                                <img src="https://images.bitcoinwallet.com/Files/fc9be77d66857b4e928491cddf426d0b.jpg" class="circular_about">
+                                </td>
+                         	</tr>
+                     	</table>
+                    </td> 
+              	</tr>
+                <tr>      
+                    <td style="padding-left:5px;padding-top:10px;">                  
+                    <span class="bold_black_medium">
+<p>
+Effective January 12th at 18:00 UTC BitcoinWallet.com accounts will have email based 2FA security activated for logging in and for sending bitcoin. This is an important and valuable upgrade to the security of your bitcoin. 
+<br>
+<br>
+This security feature will be introduced incrementally, so your account may not have this feature activated immediately.  All accounts will be migrated to 2FA within a few days.
+<br>
+<br>
+What is 2FA security? 
+<br>2FA security means that in addition to entering your email address and password to log in, you will also have to enter a 6 digit security code. A new 6 digit code will be emailed to you every time you log in or send bitcoin. 
+<br>
+<br>
+How does it work? 
+<br>To log in to BitcoinWallet.com you will enter your email address and password like you normally do. We will then send you an email that contains a secure code. You will enter the secure code and will be logged in. A similar process will occur when you try to send bitcoin. We will email you a secure code which you will enter on BitcoinWallet.com. 
+<br>
+<br>
+
+What do I need to do? 
+<br>Make sure you receive emails from BitcoinWallet.com in your inbox. If you receive emails from us in your spam folder, mark us as a truted sender. 
+<br>
+<br>
+
+What if I use Authy 2FA for BitcoinWallet.com? 
+<br>We are discontinuing our Authy SMS and smart phone 2FA service and replacing it on January 12th with email based 2FA. 
+<br>
+<br>
+
+Is there any risk to me? 
+<br>Yes. It will be essential that you have access to the email account you use to log in to BitcoinWallet.com. If you lose access to your email account, or used a fake email account you will no longer be able to log in with that email address. 
+<br>
+<br>
+
+If you do not have access to the email account you use to log in to BitcoinWallet.com, you need to log in to your account before 18:00 UTC on January 12 and update your email address. If you do not do this you could lose access to your account. 
+</p>
+                    <br><br>
+                    </span>
+                    <br><br>
+                    </td>
+                </tr> 
+                <tr>
+                	<td>
+                    <hr />
+                    </td>
+
+
+    </tr>
+    <tr>
+    	<td style="padding-top:20px;">
+        	<table width="820px" align="center" cellpadding="0" cellpadding="0">
+                 <tr>
+                    <td>
+                    	<table cellpadding="0" cellpadding="0">
+                        	<tr>
+                                <td style="padding-top:7px;padding-left:5px;">
+                                <span class="bold_black_medium">
+                                <strong>
+                                In Development: Crowdfunding & Escrow
+                                </strong>
+                                <br>
+                                March 30, 2014
+                                <br>
+                                Price Givens
+                                <br>
+                                <a href="https://price.bitcoinwallet.com" class="bold_black_medium">price.bitcoinwallet.com</a>
+								</td>
+								<td style="padding-left:380px">
+								<style type="text/css">.circular_about {
+                                width: 80px;
+                                height: 80px;
+                                border-radius: 40px;
+                                -webkit-border-radius: 40px;
+                                -moz-border-radius: 40px;
+                                background: url('https://images.bitcoinwallet.com/Files/fc9be77d66857b4e928491cddf426d0b.jpg') no-repeat;
+                                }
+                                </style>
+                                <a href="https://price.bitcoinwallet.com" style="text-decoration:none;">
+                                <img src="https://images.bitcoinwallet.com/Files/fc9be77d66857b4e928491cddf426d0b.jpg" class="circular_about">
+                                </td>
+                         	</tr>
+                     	</table>
+                    </td> 
+              	</tr>
+                <tr>      
+                    <td style="padding-left:5px;padding-top:10px;">                  
+                    <span class="bold_black_medium">
+					All the features we're launching with are complete and locked down.  We've already started work on our next wave of features: crowdfunding and escrow payments.  You can see the escrow transaction mockup <a href="user_escrow.php.html">here</a>.  Since escrow transactions requires a fair amount of work flow logic to be built, you'll see our crowdsourced funding feature launched first.  Any bitcoinwallet.com user will be able to create crowdsourced funds for whatever they want.  You can see examples of our crowdsourced funds on the Crowdsourced Funds section off the homepage.  Back to work!
+                    <br><br>
+                    </span>
+                    <br><br>
+                    </td>
+                </tr> 
+                <tr>
+                	<td>
+                    <hr />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                    	<table cellpadding="0" cellpadding="0">
+                        	<tr>
+                                <td style="padding-top:7px;padding-left:5px;">
+                                <span class="bold_black_medium">
+                                <strong>
+                                Planned Feature: Organizing Your Transactions
+                                </strong>
+                                <br>
+                                March 24, 2014
+                                <br>
+                                Price Givens
+                                <br>
+                                <a href="https://price.bitcoinwallet.com" class="bold_black_medium">price.bitcoinwallet.com</a>
+								</td>
+								<td style="padding-left:340px">
+								<style type="text/css">.circular_about {
+                                width: 80px;
+                                height: 80px;
+                                border-radius: 40px;
+                                -webkit-border-radius: 40px;
+                                -moz-border-radius: 40px;
+                                background: url('https://images.bitcoinwallet.com/Files/fc9be77d66857b4e928491cddf426d0b.jpg') no-repeat;
+                                }
+                                </style>
+                                <a href="https://price.bitcoinwallet.com" style="text-decoration:none;">
+                                <img src="https://images.bitcoinwallet.com/Files/fc9be77d66857b4e928491cddf426d0b.jpg" class="circular_about">
+                                </td>
+                         	</tr>
+                     	</table>
+                    </td> 
+              	</tr>
+                <tr>      
+                    <td style="padding-left:5px;padding-top:10px;">                  
+                    <span class="bold_black_medium">
+                    You can view all your transactions in BitcoinWallet.com in what we hope is a clean, easy to understand format.  But what if you're handling 50 or more transactions per day?  You need to organize your transactions, and that's a feature we're working on rolling out in the coming weeks.  Users of Quickbooks or Mint are accustomed to creating an account list (i.e. Travel, Donations, Supplies) and assigning each transaction to a particular account.  
+                    <br><br>
+                    The option of categorizing your transaction leads to great reporting like your own personalized P&L and Balance Sheet for bitcoin transactions.  Once you categorize a transaction it will move into the appropriate list and shorten the number of unassigned transactions you have to work with.  Each user can decide for themselves how they want to organize their transactions.  The objective is to keep your list of transactions manageable and organized.  Let me know what you think about this feature and how you think it should it work!
+                    </span>
+                    <br><br>
+                    </td>
+                </tr> 
+                <tr>
+                	<td>
+                    <hr />
+                    </td>
+                </tr>   
+                <tr>
+                    <td>
+                    	<table>
+                        	<tr>
+                                <td style="padding-top:7px;padding-left:5px;">
+                                <span class="bold_black_medium">
+                                <strong>
+                    			Transparency Vs. Security
+                    			</strong>
+                    			<br>
+                    			March 18, 2014
+                    			<br>
+                    			Price Givens
+                                <br>
+                                <a href="https://price.bitcoinwallet.com" class="bold_black_medium">price.bitcoinwallet.com</a>
+								</td>
+								<td style="padding-left:495px">
+								<style type="text/css">.circular_about {
+                                width: 80px;
+                                height: 80px;
+                                border-radius: 40px;
+                                -webkit-border-radius: 40px;
+                                -moz-border-radius: 40px;
+                                background: url('https://images.bitcoinwallet.com/Files/fc9be77d66857b4e928491cddf426d0b.jpg') no-repeat;
+                                }
+                                </style>
+                                <a href="https://price.bitcoinwallet.com" style="text-decoration:none;">
+                                <img src="https://images.bitcoinwallet.com/Files/fc9be77d66857b4e928491cddf426d0b.jpg" class="circular_about">
+                                </td>
+                         	</tr>
+                     	</table>
+                    </td> 
+              	</tr>                               
+                <tr>
+                    <td style="padding-left:5px;padding-top:10px;">
+                    <span class="bold_black_medium">
+                    We reveal the balances and public keys of our corporate wallets.  You can see it <a href='resource.php.html'>here</a>, and our users can see it on their personalized Proof of Solvency page by clicking the leaf icon. There is no best practices for this because it's never been done as part of a comprehensive proof of solvency.  I asked the most prominent voice in bitcoin, who happens to have a few decades experience in security, if there was a security risk in publishing the public keys to our wallets.  He wanted to think it over because the answer wasn't immediately obvious, perhaps because the question had never been asked.  The question remained unsolved but I was partially relieved by his uncertainty. "I guess it's not an idiotic question!" I thought.  
+                    <br><br>
+                    The fact is, custodians of user's funds have to be this transparent.  We show how much we "should" have (the total amount of user deposits), we verify to each user that their balance is included in the amount we "should" have, and most importantly show how much we DO have.  The balance we show for our corporate wallets is systematically retrieved from the blockchain every few minutes.  Want proof?  Click any address of our customer wallets and see it on the blockchain for yourself.  
+                    <br><br>
+                    Is it safe for us to be so transparent?  You trust us with your bitcoin, we trust the bitcoin protocol's private key and BIP0038 security to protect the cold storage wallets they're in.  Having the public key for a wallet is not enough to access the funds held within that wallet.  Period. 
+<br /><br>
+All custodians of customer funds need an independant audit of those funds and the processes that protect them, but the notion of an independant audit is certainly fallible.  Enron had an independant auditor that signed off on the books, as did Bernie Madoff.  We've built our system so that every user is an independant auditor.  With any luck we'll have a million independant auditors scrutinizing our solvency.  
+                    </span>
+                    <br><br>
+                    </td>
+                </tr>                
+                <tr>
+                	<td>
+                    <hr>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                    	<table>
+                        	<tr>
+                                <td style="padding-top:7px;padding-left:5px;">
+                                <span class="bold_black_medium">
+                                <strong>
+                                Emotions before launch
+                                </strong>
+                                <br>
+                                March 15, 2014
+                                <br>
+                                Price Givens
+                                <br>
+                                <a href="https://price.bitcoinwallet.com" class="bold_black_medium">price.bitcoinwallet.com</a>
+								</td>
+								<td style="padding-left:515px">
+								<style type="text/css">.circular_about {
+                                width: 80px;
+                                height: 80px;
+                                border-radius: 40px;
+                                -webkit-border-radius: 40px;
+                                -moz-border-radius: 40px;
+                                background: url('https://images.bitcoinwallet.com/Files/fc9be77d66857b4e928491cddf426d0b.jpg') no-repeat;
+                                }
+                                </style>
+                                <a href="https://price.bitcoinwallet.com" style="text-decoration:none;">
+                                <img src="https://images.bitcoinwallet.com/Files/fc9be77d66857b4e928491cddf426d0b.jpg" class="circular_about">
+                                </td>
+                         	</tr>
+                     	</table>
+                    </td> 
+              	</tr>                     
+                <tr>
+                    <td style="padding-left:5px;padding-top:10px;padding-bottom:20px;">
+                    <span class="bold_black_medium">
+                    It's always exciting to launch a new product.  BitcoinWallet.com is the most excited I've been about a launch, but it's also the most nervous I've been.  I love bitcoin and I want more people to be able to access it for all it's benefits.  I'm nervous because as of today, the bitcoin community is comprised of early adopters whom I believe to be the brightest and most passionate minds in the disciplines that matter most to me.  My idea for bitcoinwallet.com is about to be presented to these great minds and judged exclusively on it's merits.  Previous accomplishments and good intentions don't factor into the question of whether or not we got it right.  There's no room in the bitcoin market for vaporware and hype.  You either approach a launch like this with humility, or it will be provided to you in great doses.    
+                    <br><br>
+                    The idea behind BitcoinWallet.com was ignited by the domain name itself.  When I had the opportunity to buy the domain name with my long time business partner Alex Charfen, the idea of making bitcoin addresses as easy as your name became obvious.  Like all creative bolts of lightening, when the idea strikes it reveals itself without effort and you see the entire story play out as if it already happened.  I knew without a doubt that bitcoin addresses would progress to friendly names like the internet had just prior to it's explosion in growth.  As an entrepreneur, when you believe in the inevitability of an idea that hasn't happened yet, you arrive in a state of panicked urgency to get to market.  All of us have had great ideas for a website, service or product only to discover it's already been done by someone else.  That's the normal existence for entrepreneurs.  When you realize maybe your idea has never been done, your mind hears the footsteps of a great mob of other innovators charging behind you.  You don't sleep, you execute.        
+                    <br><br>
+                    Change happens fast on the bitcoin timeline.  The scope of our launch is much greater than the first conversation Alex and I had about the site.  We were just going to be the white pages of bitcoin where everone's public addresses was a link to our site.  Then we wanted users and businesses around the world to be able to transfer even the smallest amount of bitcoins to each other without fees or confirmation delays.  That meant connecting to the blockchain for deposits and withdrawals which required a pursuit of system security that can never end.  Then one of the biggest bitcoin exchanges disappeared, taking user's trust with it, and we knew that proof of solvency would become the defacto standard from that day forward.  As far as I know, we're the first bitcoin service offering proof of solvency with the level of transapency that we do.   
+                    <br><br>
+                    Even as we've gone beyond our own expectations for launch, we now see how much farthur we have to go.  I believe it's possible to secure bitcoin in a way that non-technical users won't find inconvenient.  Those innovations are being driven and popularized by dozens of different companies right now and we want to be right there with them. Multi signature transactions, reasonably priced insurance for coins and allowing users to keep private keys without assuming the risks that come along with them are on the near horizon.  No one has built a great way to send bitcoin through email and sms.  Yet.
+                    <br><br>
+                    If it were possible to include the future in today's launch we would, but it's time to go to market with the very conviction that led us here and be judged by the people I respect the most.  I hope you enjoy our site.
+                    </span>
+                    <br><br>
+                    </td>
+                </tr>
+			</table>
+		</td>
+	</tr>
+</table>        
+
+
+<table width="1000px" align="center" bgcolor="#2c3137" cellspacing="0" cellpadding="0">
+    <tr>
+    	<td align="center">
+        	<table width="600px">
+    			<tr>
+                    <td><a href='terms.php.html' class='light_blue_medium'>Terms of Use</a></td>
+    				<td><a href='privacy.php.html' class='light_blue_medium'>Privacy Policy</a></td>
+	                <td><a href='developers.php.html' class='light_blue_medium'>Developers</a></td>
+					<td><a href='advertisers.php.html' class='light_blue_medium'>Advertisers</a></td>
+        			<td><a href='about.php.html' class='light_blue_medium'>About Us</a></td>
+                    <td><a href='blog.php.html' class='light_blue_medium'>Blog</a></td>
+					<td style="padding-left:15px;padding-top:3px;"><a href='https://twitter.com/btcw1'><img src='images/icon_twitter.png' height='15px' border='0'></a></td>
+				</tr>
+          	</table>
+        </td>	          
+    </tr>
+	<tr>
+		<td bgcolor="#282828" height="6px"><img src="images/spacer.png" height="6px"></td>
+	</tr>   
+</table>
+

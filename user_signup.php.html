@@ -1,0 +1,510 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="description" content="Bitcoinwallet.com replaces bitcoin addresses with your name. We are the easiest to use and most secure bitcoin wallet service.">
+<meta name="keywords" content="bitcoin wallet, no transaction fees, proof of solvency, bitcoin bank, secure bitcoin wallet.">
+<meta name="msvalidate.01" content="5E60F57284D5D363443E54E809ACE8BD" />
+<LINK href="stylesheet.css" rel="stylesheet" type="text/css">
+<link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/smoothness/jquery-ui.min.css" rel="stylesheet" type="text/css" />
+<title>Bitcoin Wallet</title>
+<meta property="og:title" content="BitcoinWallet.com"/>
+<meta property="og:site_name" content="https://bitcoinwallet.com"/>
+<meta property="og:description" content="Bitcoin addresses as easy as your name. Send bitcoin instantly with no fees."/>
+<meta property="og:image" content="https://bitcoinwallet.com/images/icon_leaf.png"/>
+
+
+    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-47825020-1', 'bitcoinwallet.com');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body style="margin: 0px 0px 0px 0px; background-color:#c2c2c2;">
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=419838244743649";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<style  type="text/css">.input_search
+{
+-webkit-border-radius:10px;
+-moz-border-radius:10px;
+border-radius: 10px;
+height:20px;
+width:120px;
+border:0px;
+text-align:center;
+color:#c2c2c2;
+background-color: #2b3642;
+}
+
+.menu_circular 
+{
+	width: 36px;
+	height: 36px;
+	border-radius: 18px;
+	-webkit-border-radius: 18px;
+	-moz-border-radius: 18px;
+	background: url('') no-repeat;
+	}
+</style>
+
+<table width="100%" cellpadding="0" cellspacing="0" valign="top" border="0">
+	<tr>
+		<td bgcolor="#282828" height="40px" align="center">
+			<table width="1000px" border="0">
+            	<tr>
+					<td style="padding-left:10px;" nowrap="nowrap"><a href='index.html' class='menu'>Home</a></td>
+                    <td style="padding-left:40px;" nowrap="nowrap"><a href='user_signup.php.html' class='menu'>Create Account</a></td>
+                    <!--<td style="padding-left:40px;" nowrap="nowrap"><a href='https://bitcoinwallet.com/user_giveaway.php' class='menu'>Giveaways</a></td>-->
+                    <!--<td style="padding-left:40px;" nowrap="nowrap"><a href='https://bitcoinwallet.com/buy_sell_bitcoin.php' class='menu'>Buy/Sell</a></td>-->
+                    <td style="padding-left:40px;" nowrap="nowrap"><a href='https://localbitcoins.com/?ch=1mux' class='menu' target="_blank">Buy/Sell</a></td>
+                    <td style="padding-left:40px;" nowrap="nowrap"><a href='support.php.html' class='menu'>Support</a></td>
+                    <!--<td style="padding-left:40px;" nowrap="nowrap"><a href='https://bitcoinwallet.com/resource.php' class='menu'>Stats</a></td>-->
+                    <td style="padding-left:40px;" nowrap="nowrap"><a href='faq.php.html' class='menu'>FAQ</a></td>
+					<td style="padding-left:40px;" nowrap="nowrap"><a href='user_login.php.html' class='menu'>Log In</a></td>
+                    <td width="140px"></td>
+                    <td align='right'>
+					<form method='post' action='user_search.php.html'><input type='text' name='search' id='search'  value=' User Search' class="input_search"   onFocus="if(this.value==' User Search')this.value='';" onBlur="if(this.value=='')this.value=' User Search';">
+                    <input type="hidden" name="csrftoken" id="csrftoken" value="eee50a9bf39e3ef417b0d53a2814df5e" />
+					</td>
+					<td>
+					<input type='submit' id="btnSearch" name="btnSearch" value='' style="position: absolute; left: -9999px">					
+					</td></form>
+				</tr>
+           	</table>
+      	</td>
+   	</tr>
+<!--	<tr>
+		<td bgcolor="#010101" height="10px" align="center"><span class="bold_green_medium">Due to blockchain congestion, withdrawals will have a 0.0005 bitcoin charge added to the fee to accelerate their arrival.<br></td>
+	</tr> -->
+ 		<tr>
+		<td bgcolor="#010101" height="10px" align="center"><span class="bold_green_medium">Due to congestion on the bitcoin blockchain, the fee for withdrawing bitcoin will increase to 0.001 bitcoin effective January 5, 2018.</td>
+	</tr>
+	</table>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script language="javascript" src="js/passchk.js"></script>
+<script language="javascript" src="js/common.js"></script>
+<script language="javascript" src="js/frequency.js"></script>
+<script src="https://www.google.com/recaptcha/api.js"></script>
+<script language="javascript" type="text/javascript">
+
+
+$( document ).ready(function() {
+	
+	$("input").bind("keydown", function(event) {
+		  var keycode = (event.keyCode ? event.keyCode : (event.which ? event.which : event.charCode));
+		  if (keycode == 13) { 
+			if($('#hddstep').val() == 0) document.getElementById('btnNext0').click();
+			if($('#hddstep').val() == 1) document.getElementById('btnNext1').click();
+			if($('#hddstep').val() == 4) document.getElementById('btnNext4').click();
+			 return false;
+		  } else  {
+			 return true;
+		  }
+	   }); 
+	   
+
+   
+	$( "#txtUsername" ).keyup(function() {
+		
+		if (this.value.match(/[^a-zA-Z0-9]/g)) { 
+			this.value = this.value.replace(/[^a-zA-Z0-9]/g, ''); 
+		} 
+		$("#divpreviewusername").html("https://" + $( "#txtUsername" ).val() + ".bitcoinwallet.com");
+		
+	
+	});
+	goStep(0);  });
+  
+function CheckEmailPassword(){
+
+	if(!ConfirmPassword()){
+		return;
+	}
+	
+	var request = $.ajax({
+	  url: "ajax_call.php",
+	  type: "POST",
+	  data: { method : "CheckEmailPasswordSignUp" ,  email : $("#email").val(), password : $("#passchk_pass").val(), csrftoken : "57629d0c724900db887705e315fce8b2", grecaptcharesponse : $("#g-recaptcha-response").val()  },
+	  dataType: "html"
+	});
+	 
+	request.done(function( data ) {
+	  var obj = $.parseJSON(data);
+	  if(!obj.success){
+		$("#divlog0").html(obj.msg);
+		$( "#email" ).focus();  
+		grecaptcha.reset();  
+
+	  }else{
+		goStep(1);
+	  }
+	});
+	 
+	request.fail(function( jqXHR, textStatus ) {
+	  alert( "Request failed: " + textStatus );
+	});
+
+}
+  function PremiumUserAlert(){
+  	alert("1 character names = 2 btc + .2 btc per year\n2 character names = 1 btc + .1 btc per year\n3 character names = .4 btc + .04 btc per year\n4 character names = .1 btc + .01 btc per year\n5+ character names = Free");
+  }
+  
+function CheckUsername(){
+	var available = false;
+	
+	if($('#hddusername').val() == $("#txtUsername").val() && $('#hddusername').val() != ""){
+		UsernameSubmit();
+		return;
+	}
+	
+	$('#hddusername').val('');
+	var request = $.ajax({
+	  url: "ajax_call.php",
+	  type: "POST",
+	  data: { method : "UserNameSuggestion" ,  username : $("#txtUsername").val(), csrftoken : "b7e7bbef94644f18edada92785c7d9b2" },
+	  dataType: "html",
+	  async: false
+	  
+	});
+	 
+	request.done(function( data ) {
+		var obj = $.parseJSON(data);
+		$("#divlog1").html(obj.msg);
+		$("#divsug").html("");
+		var sugestions = $.parseJSON(obj.suggestion);
+		$.each(sugestions, function(k, v) {
+			var s = '';
+			s = s + '<tr><td style="padding-left:150px;"><input type="radio" name="rdoSuggestion" id="rdoSuggestion" value="' + k + '" onclick="sugClick(\'' + k + '\');" /><span class="bold_white" >' + k;
+			if(v > 0) {
+				s = s +  ' (<span  onclick="PremiumUserAlert();"><u>Premium User</u></span> Costs ' + v + ' btc)';
+			} else {
+				s = s +  ' (Free)';
+			}
+			s = s + '</span></td></tr>';
+			var radioBtn = $(s);
+			radioBtn.appendTo('#divsug');
+			available = false;
+		});
+		if(!obj.success){
+			//username already taken
+		}else { //success
+			$('#hddusername').val($("#txtUsername").val());
+			available = true;
+			
+		}
+	});
+	 
+	request.fail(function( jqXHR, textStatus ) {
+	  alert( "Request failed: " + textStatus );
+	});
+	return available;
+
+}
+
+function UsernameSubmit(){
+	
+	if($("#hddusername").val() == '') {
+		alert('Username is required. Please try again.');
+		return; 	
+	}
+	
+	var request = $.ajax({
+	  url: "ajax_call.php",
+	  type: "POST",
+	  data: { method : "UserNameSubmit" ,  username : $("#hddusername").val(), csrftoken : "69268793d30c6931a2e31cad4fc37483" },
+	  dataType: "html"
+	});
+	 
+	request.done(function( data ) {
+		var obj = $.parseJSON(data);
+		$("#divlog1").html(obj.msg);
+		$("#divsug").html("");
+		if(obj.success){
+			goStep(4);
+		}else { //fail
+
+		}
+	});
+	 
+	request.fail(function( jqXHR, textStatus ) {
+	  alert( "Request failed: " + textStatus );
+	});
+
+}
+
+
+
+
+function ConfirmPassword(){
+	var hasError = false;
+	var passwordVal = $("#passchk_pass").val();
+        var checkVal = $("#confirm_pass").val();
+        if (passwordVal == '') {
+			$('#divlog0').html('Please enter a password.');
+            hasError = true;
+        } else if (checkVal == '') {
+            $('#divlog0').html('Please re-enter your password.');
+            hasError = true;
+        } else if (passwordVal != checkVal ) {
+            $('#divlog0').html('Passwords do not match.');
+            hasError = true;
+        }
+        if(hasError == true) {
+			return false;
+		}else {
+			return true;
+		}
+}
+
+
+function goStep(n){
+	$('#hddstep').val(n);
+	if(n ==0){
+		$('#btnNext0').show();
+		$('#btnBack1').hide();
+		$('#btnNext1').hide();
+		$('#btnBack2').hide();
+		$('#btnNext2').hide();
+		$('#btnBack3').hide();
+		$('#btnNext3').hide();
+		$('#btnBack4').hide();
+		$('#btnNext4').hide();
+		$('#divemail').show();
+		$('#divform').hide();
+		$('#divSMS').hide();
+		$('#divphone').hide();
+		$('#divActivation').hide();
+		$('#divinstruction').html('Enter Your Email and Password');
+		$('#tabemail').attr('class', 'signup_step_white');
+		$('#tabusername').attr('class', 'signup_step_grey');
+		$('#tabsms').attr('class', 'signup_step_grey');
+		$('#tabverify').attr('class', 'signup_step_grey');
+		$('#hddusername').val('');
+		$( "#email" ).focus();
+	}
+	else if(n ==1){
+		$('#btnNext0').hide();
+		$('#btnBack1').show();
+		$('#btnNext1').show();
+		$('#btnBack2').hide();
+		$('#btnNext2').hide();
+		$('#btnBack3').hide();
+		$('#btnNext3').hide();
+		$('#btnBack4').hide();
+		$('#btnNext4').hide();
+		$('#divemail').hide();
+		$('#divform').show();
+		$('#divSMS').hide();
+		$('#divphone').hide();
+		$('#divActivation').hide();
+		$('#divinstruction').html('Enter Your Desired Username');
+		$('#tabemail').attr('class', 'signup_step_grey');
+		$('#tabusername').attr('class', 'signup_step_white');
+		$('#tabsms').attr('class', 'signup_step_grey');
+		$('#tabverify').attr('class', 'signup_step_grey');
+		$('#hddusername').val('');
+		$( "#txtUsername" ).focus();
+		
+
+	}
+	
+	else if(n == 4){
+		$('#btnNext0').hide();
+		$('#btnBack1').hide();
+		$('#btnNext1').hide();
+		$('#btnBack2').hide();
+		$('#btnNext2').hide();
+		$('#btnBack3').hide();
+		$('#btnNext3').hide();
+		$('#btnBack4').hide();
+		$('#btnNext4').hide();
+		$('#divemail').hide();
+		$('#divform').hide();
+		$('#divSMS').hide();
+		$('#divphone').hide();
+		$('#divActivation').show();
+		$('#divinstruction').html('We sent you a confirmation email. Open the email and click the link. Clicking the activation link will log you in.');
+		$('#tabemail').attr('class', 'signup_step_grey');
+		$('#tabusername').attr('class', 'signup_step_grey');
+		$('#tabsms').attr('class', 'signup_step_grey');
+		$('#tabverify').attr('class', 'signup_step_white');
+	}
+}
+
+function sugClick(k){
+	$('#txtUsername').val(k); 
+	$('#hddusername').val(k);
+	$('#btnNext1').show(); 
+	$('#divpreviewusername').html('https://' + $( '#txtUsername' ).val() + '.bitcoinwallet.com');
+
+}
+
+
+</script>
+
+<form name="frm1" id="frm1" method="post" action="">
+<input type="hidden" id="hddstep" name="hddstep" value=1  />
+<input type="hidden" id="hddusername" name="hddusername" value=""  />
+<table width="1000px" bgcolor="#5ea9dd" align="center">
+	<tr>
+   		<td style="padding-top:5px;" align="center">
+        	<table height="450px" width="600px" valign="top" border="0"> 
+            	<tr height="20px">
+                	<td valign="top" align="center" style="padding-top:10px;" width="100%">
+                    	<table cellpadding="0" cellspacing="0" width="500px" align="center" border="0">
+                        	<tr>
+								<td width="20px"><span id="tabemail" class="signup_step_grey">Email</span></td>
+								<td><img src="images/spacer.png"></td>
+                            	<td width="30px"><span id="tabusername" class="signup_step_white">Username</span></td>
+                                <td><img src="images/spacer.png"></td>
+                                <td width="30px"><span id="tabverify" class="signup_step_grey">Verify</span></td>
+                            </tr>
+                            
+                                
+							<tr>
+								<td colspan="7" style="padding-top:50px;"><span class="signup_headline" id="divinstruction" ></span></td>
+							</tr>
+                    	</table>
+                    </td>
+                </tr>
+                <tr height="220px" valign="top" >
+                	<td  align="center" style="padding-top:25px;">
+						<div id="divemail" style="display:none;">
+                    	<table border="0">
+                        	<tr>
+                            	<td><span class="bold_white">Email</span></td>
+								<td><span class="bold_white">Password</span>&nbsp;<span id="passchk_result"></span></td>
+                            </tr>
+							<tr>
+							<td>
+								<input type="email" class="credentials" id="email" name="email" value="" maxlength="45" style="-webkit-border-radius:8px;-moz-border-radius:8px;border-radius: 8px;height:30px; width:240px; border:0px;font-size:20px;padding-left:5px;padding-top:3px;" >
+							</td>
+                                <td>
+                                   <input type="password" class="credentials" name="passchk_pass" id="passchk_pass" maxlength="45" style="-webkit-border-radius:8px;-moz-border-radius:8px;border-radius: 8px;height:30px; width:240px; border:0px;font-size:20px;padding-left:5px;padding-top:3px;" >
+                                </td>
+							</tr>
+							<tr>
+                            	<td>&nbsp;</td>
+								<td><span class="bold_white">Confirm Password</span></td>
+                            </tr>
+							<tr>
+                            	<td>&nbsp;</td>
+								<td><input type="password" class="credentials" name="confirm_pass" id="confirm_pass" maxlength="45" style="-webkit-border-radius:8px;-moz-border-radius:8px;border-radius: 8px;height:30px; width:240px; border:0px;font-size:20px;padding-left:5px;padding-top:3px;" ></td>
+                            </tr>
+                            <tr>
+									<td colspan="2" align="center" style="padding-top:25px;">
+                                		<div class="g-recaptcha" data-sitekey="6Lc4Lw4TAAAAAArhRF8dOegMwWETLD55K6FbY_C0"></div>
+                                    </td>
+                                </tr>
+                          	<tr>
+								<td colspan="2"><span class="bold_white_medium" id="divlog0" ></span></td>
+							</tr>
+                       	</table>
+
+						</div>
+						<div id="divform">
+                    	<table border="0" width="100%" align="center">
+                            <tr>
+								<td width="30px" rowspan="4">&nbsp;</td>
+                                <td  align="center">
+                                    <input type="text" id="txtUsername" name="txtUsername" class="user_name" maxlength="45" value="" style="-webkit-border-radius:8px;-moz-border-radius:8px;border-radius: 8px;height:30px; width:240px; border:0px;font-size:20px;padding-left:5px;padding-top:3px;" >
+                                </td>
+							</tr>
+                            <tr>
+                            	<td  align="center" style="padding-top:5px;"><span id="divpreviewusername" class="bold_white">https://.bitcoinwallet.com</span></td>
+                            </tr>
+							<tr>
+								<td align="left"  style="padding-top:10px;"><span class="bold_white" id="divlog1" ></span></td>
+							</tr>
+                            <tr>
+                            	<td align="left"  style="padding-top:10px;">
+                                	<table width="100%" align="center">
+											<div <span class="bold_white" id="divsug"></div>
+                                   	</table>        
+                                </td>
+                            </tr>
+                       	</table>
+						</div>
+	 
+						 <div id="divActivation" style="display:none;"> 
+						 	<div id="premium_payment">
+	
+							
+							
+							</div>
+						<table border="0" width="600px;">
+							<tr>
+								<td colspan="2"><span class="bold_white" id="divlog4" ></span></td>
+							</tr>
+                       	</table>
+						 </div>
+                   	</td>          	
+                </tr>
+                <tr height="60px">
+                	<td align="center">
+                    	<table width="250px" align="center">
+                        	<tr>
+                                <td align="left">
+									<img id="btnBack1" src="images/button_back.png" onclick="goStep(0);" style="display:none;" >								 
+	                               	<img id="btnBack4" src="images/button_back.png" onclick="goStep(1);" style="display:none;" >
+                                </td>
+                                <td align="right">
+									<img id="btnNext0" src="images/button_next.png" onclick="CheckEmailPassword();" style="display:none;">
+									<img id="btnNext1" src="images/button_next.png" onclick="CheckUsername();" style="display:none;">
+                                   	<img id="btnNext4" src="images/button_next.png" onclick="CreateAccount();"  style="display:none;">
+                                </td>
+							</tr>
+                      	</table>
+                   	</td>           
+                </tr>
+                <tr height="40px">
+                	<td></td>
+                </tr>
+            </table>
+        </td> 
+    </tr>
+<table>
+</form>
+<table width="1000px" align="center" bgcolor="#2c3137" cellspacing="0" cellpadding="0">
+    <tr>
+    	<td align="center">
+        	<table width="600px">
+    			<tr>
+                    <td><a href='terms.php.html' class='light_blue_medium'>Terms of Use</a></td>
+    				<td><a href='privacy.php.html' class='light_blue_medium'>Privacy Policy</a></td>
+	                <td><a href='developers.php.html' class='light_blue_medium'>Developers</a></td>
+					<td><a href='advertisers.php.html' class='light_blue_medium'>Advertisers</a></td>
+        			<td><a href='about.php.html' class='light_blue_medium'>About Us</a></td>
+                    <td><a href='blog.php.html' class='light_blue_medium'>Blog</a></td>
+					<td style="padding-left:15px;padding-top:3px;"><a href='https://twitter.com/btcw1'><img src='images/icon_twitter.png' height='15px' border='0'></a></td>
+				</tr>
+          	</table>
+        </td>	          
+    </tr>
+	<tr>
+		<td bgcolor="#282828" height="6px"><img src="images/spacer.png" height="6px"></td>
+	</tr>   
+</table>
+
